@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="WpfApplication1.View.UcControls.UcDocLab"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             BorderBrush="{DynamicResource AccentColorBrush}"
+            
+             mc:Ignorable="d" Width="1366" Height="735"  MinHeight="660" MinWidth="1214" 
+              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+     xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+     xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro">
+    <Grid Background="White">
+        <TabControl  Margin="0,0,0,0">
+            <TabItem Header="Consulta Laboratorio">
+                <Grid  Margin="2,-4,-2,0">
+                    <Canvas x:Name="holdsa" Background="White" Margin="0,0,0,9.6" HorizontalAlignment="Left" Width="1350">
+
+
+                        <DataGrid x:Name="dtgBuscarLab" Canvas.Top="165" Height="280" Width="794" Canvas.Left="37" Style="{StaticResource AzureDataGrid}" AutoGenerateColumns="False" BorderBrush="#FF00A49B">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="No Lab"  Binding="{Binding IdLab}"/>
+                                <DataGridTextColumn Header="Nombre"  Binding="{Binding Nombre}"/>
+                                <DataGridTextColumn Header="Nombre Del Responsable" Binding="{Binding Director}"/>
+                                <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}"/>
+                                <DataGridTextColumn Header="Calle" Binding="{Binding Calle}"/>
+                                <DataGridTextColumn Header="Colonia" Binding="{Binding Colonia}"/>
+                                <DataGridTextColumn Header="Municipio" Binding="{Binding Municipio}"/>
+                                <DataGridTextColumn Header="Estado" Binding="{Binding Estado}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <Label x:Name="label" Content=" CONSULTA LABORATORIO" Canvas.Left="514" Canvas.Top="35" FontFamily="Source Sans Pro Black" FontSize="36" Foreground="#FF00A49B"/>
+                    </Canvas>
+                    <Controls:Tile VerticalAlignment="Top"  Click=" btnRegresar" HorizontalAlignment="Left" Background="#FF00A49B" ToolTip="Gestijsdehjhvv" Height="34" Width="75"  Margin="-7,-2,0,0" >
+                        <Image Source="/Resources/palomitaderecha.png" Width="83" Height="34" OpacityMask="#FF00A49B"/>
+                    </Controls:Tile>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

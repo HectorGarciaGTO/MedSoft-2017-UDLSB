@@ -1,0 +1,21 @@
+﻿<Window x:Class="MedSoft.View.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        BorderBrush="{DynamicResource AccentColorBrush}"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Login" Height="400" Width="450">
+    <Grid>
+        <Canvas Background="#FF00A49B">
+            <TextBox x:Name="txtUser" HorizontalAlignment="Left" Height="41" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" PreviewTextInput="txtUser_PreviewTextInput" Canvas.Left="97" Canvas.Top="226" />
+            <Label Content="Usuario" HorizontalAlignment="Left" VerticalAlignment="Top" Height="41" Width="94" Canvas.Left="-2" Canvas.Top="226" Foreground="White"/>
+            <Label Content="Medsoft" HorizontalAlignment="Center" VerticalAlignment="Top" Width="193" Canvas.Left="137" Canvas.Top="151" FontFamily="Source Sans Pro Black" FontSize="48" Foreground="White"/>
+            <PasswordBox x:Name="txtPass" HorizontalAlignment="Left" Height="41" VerticalAlignment="Top" Width="270" Canvas.Left="97" Canvas.Top="308"/>
+            <Label Content="Contraseña" HorizontalAlignment="Left" VerticalAlignment="Top" Height="41" Width="94" Canvas.Left="-2" Canvas.Top="308" Foreground="White"/>
+            <Button Content="Entra" Foreground="#FF00A49B" HorizontalAlignment="Left" VerticalAlignment="Top" Width="52" Height="123" Click="Button_Click" Canvas.Left="391" Canvas.Top="224" Background="White" FontSize="12" FontFamily="Source Sans Pro Black"/>
+            <Image x:Name="image" Height="126" Canvas.Left="47" Canvas.Top="20" Width="355" Source="/Resources/Logo - Medical Center2.png"/>
+        </Canvas>
+    </Grid>
+</Window>
